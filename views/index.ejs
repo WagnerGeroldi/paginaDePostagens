@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+    <div class="container">
+        
+        <div class="title-content">
+            Feed de Postagens
+        </div>
+        <hr>
+        <% posts.forEach((item) => { %>
+            <div class="post">
+                <h3> <span><em> Autor:</em></span> <br>  <%=item.name %></h3>
+                
+                <p><span> <em> Post:</em></span>  <%=item.post %></p>
+                <br>
+                <hr>
+            </div>
+        <%}) %>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

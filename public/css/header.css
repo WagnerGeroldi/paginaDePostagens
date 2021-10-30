@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    padding: 30px;
+    background: rgb(92, 129, 250);
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.texto {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+
+
+.list-item {
+    display: flex;
+    gap: 30px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+a:hover {
+    color: black;
+    transition: 0.4s;
+}
+
+li {
+    list-style: none;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column ;
+        gap: 10px;
+    }
+}

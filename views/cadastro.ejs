@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="container">
+      <div class="title-content">Cadastrar Postagem</div>
+      <hr />
+      <div class="form">
+        <form action="/salvar" method="post">
+          <label for="name">Nome:</label>
+          <br>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Digite seu nome..."
+          />
+          <br>
+          <br>
+          <label for="post">Postagem:</label>
+          <br>
+          <textarea
+            name="post"
+            id="post"
+            cols="30"
+            rows="10"
+            required
+            placeholder="Digite seu recado..."
+          ></textarea>
+          <br>
+          <button type="submit">Cadastrar Recado</button>
+          <% if(postagem) { %>
+              <p> Enviado com sucesso! </p>
+          <%}%>
+        </form>
+      </div>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>
